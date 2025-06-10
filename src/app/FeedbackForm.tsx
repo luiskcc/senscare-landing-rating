@@ -76,10 +76,12 @@ const FeedbackForm = () => {
       } else {
         alert('Hubo un error. Por favor, inténtalo de nuevo.');
       }
-    } catch (error) {
+    } catch (_) {
       alert('Hubo un error. Por favor, inténtalo de nuevo.');
     }
   };
+
+  return (
 
     <div className="text-center text-[rgb(46,75,96)]">
       <div className="content-section px-[40px] py-[150px] lg:px-[100px] lg:py-[200px] xl:p-[100px]">
@@ -140,6 +142,7 @@ const FeedbackForm = () => {
         </div>
       </div>
     </div>
+  );
 };
 
 export default FeedbackForm;
