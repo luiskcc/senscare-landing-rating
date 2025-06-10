@@ -47,12 +47,8 @@ const FeedbackForm = () => {
   };
   
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<string | null>(null);
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
   
     try {
       const response = await fetch('https://formspree.io/f/manjezar', {
@@ -69,25 +65,22 @@ const FeedbackForm = () => {
       });
   
       if (response.ok) {
-        setSubmitStatus('success');
         setFeedbackData({
           rating: 0,
           clientName: '',
           emailAddress: '',
           comment: ''
         });
+        alert('Gracias por tu feedback!');
         redirectToHomePage();
       } else {
-        setSubmitStatus('error');
+        alert('Hubo un error. Por favor, inténtalo de nuevo.');
       }
     } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
+      alert('Hubo un error. Por favor, inténtalo de nuevo.');
     }
-    
   };
-  
+
 
 
     
