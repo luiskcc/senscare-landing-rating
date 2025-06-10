@@ -36,7 +36,7 @@ const FeedbackForm = () => {
   };
 
   const redirectToHomePage = () => {
-    window.location.href = "https://senscarespa.com/";
+    window.location.href = "https";
   }
 
   const showCommentSection = () => {
@@ -45,6 +45,7 @@ const FeedbackForm = () => {
       commentSection.classList.remove('hidden');
     }
   };
+  
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<string | null>(null);
@@ -84,9 +85,12 @@ const FeedbackForm = () => {
     } finally {
       setIsSubmitting(false);
     }
+    
   };
+  
 
-  return (
+
+    
     <div className="text-center text-[rgb(46,75,96)]">
       <div className="content-section px-[40px] py-[150px] lg:px-[100px] lg:py-[200px] xl:p-[100px]">
         <h1 className="lg:text-4xl text-4xl text-slate-800 mb-4 font-open-sans">
