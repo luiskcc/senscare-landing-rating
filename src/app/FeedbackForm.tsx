@@ -75,10 +75,6 @@ const FeedbackForm = () => {
         redirectToHomePage();
       } else {
         alert('Hubo un error. Por favor, inténtalo de nuevo.');
-      }
-    } catch (_) {
-      alert('Hubo un error. Por favor, inténtalo de nuevo.');
-    }
   };
 
   return (
