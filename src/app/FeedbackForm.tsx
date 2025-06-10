@@ -32,8 +32,8 @@ const FeedbackForm = () => {
     }
 
   const redirectToPage = () => {
-    window.location.href = "https://www.google.com/search?sca_esv=ea7b27f3c7f5bbf6&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyK5qbfm6waJWN25G7fUCxDJbl-qAGI4S_VnpmZc7vA1R2zrLl3VGz1OLzzB_qxVOONmuJIvBMAsWv65r7PFv86lG_izaaruMj8nXtx7x7Jkn5Wq5g%3D%3D&q=Spa+Laguna+Nivaria+Reviews&sa=X&ved=2ahUKEwi0ptaUq-eNAxUUSjABHa-8GbMQ0bkNegQIKhAE&biw=1511&bih=814&dpr=2#lrd=0xc41cdb84c30f1bf:0xd6a550bc1858145e,3,,,,"
-  };
+    window.location.href = "https://www.google.com/search?sca_esv=ea7b27f3c7f5bbf6&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyK5qbfm6waJWN25G7fUCxDJbl-qAGI4S_VnpmZc7vA1R2zrLl3VGz1OLzzB_qxVOONmuJIvBMAsWv65r7PFv86lG_izaaruMj8nXtx7x7Jkn5Wq5g%3D%3D&q=Spa+Laguna+Nivaria+Reviews&sa=X&ved=2ahUKEwiL9JmPg-iNAxXDpLAFHTuZEXEQ0bkNegQIKBAE&biw=1512&bih=814&dpr=2#lrd=0xc41cdb84c30f1bf:0xd6a550bc1858145e,3,,,,";
+  }
 
   const redirectToHomePage = () => {
     window.location.href = "https";
