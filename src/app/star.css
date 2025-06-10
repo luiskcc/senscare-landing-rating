@@ -1,0 +1,37 @@
+/* src/app/stars.css */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 50px 0;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(240, 239, 239);
+    transition: color 0.2s ease;
+  }
+  
+  .rating label:hover,
+  .rating label:hover ~ label,
+  .rating input:checked ~ label {
+    color: #C2A471;
+  }
+
+  .rating div {
+    display: inline-block;
+  }
+
+  .rating > div:hover > label,
+.rating > div:hover ~ div > label {
+  color: #C2A471 !important; /* tailwind orange-400 */
+}
+
+.rating > div > input:checked ~ div > label {
+  color: #C2A471 !important; /* tailwind orange-400 */
+}

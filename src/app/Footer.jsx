@@ -1,19 +1,9 @@
 // components/Footer.tsx
 const Footer = () => {
     return (
-      <footer className="footer bottom-0 w-full bg-blue-gray-custom text-white">
+      <footer className="bg-footer bottom-0 w-full bg-blue-gray-custom text-white">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
   
-          <hr className="my-6 border-gray-200 sm:mx-auto border-gray-700 lg:my-8" />
-          
-          {/* Copyright and Social Media Links */}
-          <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-gray-400 sm:text-center">
-              © 2025 <a href="#" className="hover:underline">Senscare</a>. All Rights Reserved.
-            </span>
-            
-            <div className="flex mt-4 sm:justify-center sm:mt-0">
-              {/* Social Media Icons */}
               {/* Facebook */}
               <a href="https://www.facebook.com/ADboatrental" className="text-gray-500 hover:text-white">
                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
@@ -29,7 +19,31 @@ const Footer = () => {
                 </svg>
                 <span className="sr-only">Instagram</span>
               </a>
+          <hr className="my-6 border-1 border-[#C2A471] sm:mx-auto lg:my-8" />
+          
+          {/* Copyright and Social Media Links */}
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <span className="text-sm text-gray-400 sm:text-center">
+              © 2025 <a href="#" className="hover:underline">SensCare Spa</a>
+            </span>
+            
+            <div className="flex mt-4 sm:justify-center sm:mt-0">
+              {/* Social Media Icons */}
+              <a href="https://www.instagram.com/adboatrental_/" className="text-gray-500 hover:text-white ms-5">
+                Aviso Legal
+              </a>
+
+              <a href="https://www.instagram.com/adboatrental_/" className="text-gray-500 hover:text-white ms-5">
+               Cookies
+              </a>
+
+              <a href="https://www.instagram.com/adboatrental_/" className="text-gray-500 hover:text-white ms-5">
+                Condiciones
+              </a>
   
+              <a href="https://www.instagram.com/adboatrental_/" className="text-gray-500 hover:text-white ms-5">
+                Privacidad
+              </a>
               {/* Other social media icons... */}
             </div>
           </div>

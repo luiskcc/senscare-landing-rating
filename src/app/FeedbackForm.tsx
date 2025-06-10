@@ -1,6 +1,7 @@
 // src/app/FeedbackForm.tsx
 "use client";
 import { FormEvent, useState } from 'react';
+import './star.css'; // Make sure to create this file
 
 interface FeedbackData {
   rating: number;
@@ -18,16 +19,19 @@ const FeedbackForm = () => {
   });
 
   const redirectToPage = () => {
-    // Implement your redirect logic here
+    window.location.href = "https://www.google.com/search?sca_esv=ea7b27f3c7f5bbf6&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyK5qbfm6waJWN25G7fUCxDJbl-qAGI4S_VnpmZc7vA1R2zrLl3VGz1OLzzB_qxVOONmuJIvBMAsWv65r7PFv86lG_izaaruMj8nXtx7x7Jkn5Wq5g%3D%3D&q=Spa+Laguna+Nivaria+Reviews&sa=X&ved=2ahUKEwi0ptaUq-eNAxUUSjABHa-8GbMQ0bkNegQIKhAE&biw=1511&bih=814&dpr=2#lrd=0xc41cdb84c30f1bf:0xd6a550bc1858145e,3,,,,"
   };
 
   const showCommentSection = () => {
-    // Implement your comment section logic here
+    const commentSection = document.querySelector('.comment-section');
+    if (commentSection) {
+      commentSection.classList.remove('hidden');
+    }
   };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Implement your submit logic here
+    console.log('Form submitted:', feedbackData);
   };
 
   return (
@@ -36,62 +40,52 @@ const FeedbackForm = () => {
         <h1 className="lg:text-4xl text-4xl text-slate-800 mb-4 font-open-sans">
           Gracias por visitarnos, valoramos tu opinión.
         </h1>
-        <div className="max-w-[400px] mx-auto"> {/* feedback-form */}
+        <div className="max-w-[400px] mx-auto">
           <form onSubmit={handleSubmit} id="feedbackForm">
-            <div className="flex flex-row-reverse justify-center py-[50px]"> {/* rating */}
+            <div className="rating">
               {[5, 4, 3, 2, 1].map((value) => (
-                <div key={value} className="inline group">
+                <div key={value}>
                   <input
                     type="radio"
                     id={`star${value}`}
                     name="rating"
                     value={value}
                     onChange={() => value === 5 ? redirectToPage() : showCommentSection()}
-                    className="hidden" // rating input
                   />
-                  <label 
-                    htmlFor={`star${value}`}
-                    className="bg-[rgb(240,239,239)] text-white text-[30px] cursor-pointer
-                             group-hover:text-orange-400 
-                             peer-checked:text-orange-400
-                             [&:has(+input:checked)]:text-orange-400
-                             [&:has(~label:hover)]:text-orange-400"
-                  >
-                    ★
-                  </label>
+                  <label htmlFor={`star${value}`}>★</label>
                 </div>
               ))}
             </div>
             
-            <div className="mb-5 hidden"> {/* comment */}
+            <div className="comment-section mb-5 hidden">
               <div className="flex flex-col pb-10">
                 <input
                   id="client_name"
                   value={feedbackData.clientName}
                   onChange={(e) => setFeedbackData({...feedbackData, clientName: e.target.value})}
-                  placeholder="Name"
-                  className="border border-[#ccc] p-[5px] mb-[10px] rounded" // input-box
+                  placeholder="Nombre"
+                  className="border border-[#ccc] p-[5px] mb-[10px]"
                 />
                 <input
                   id="email_address"
                   value={feedbackData.emailAddress}
                   onChange={(e) => setFeedbackData({...feedbackData, emailAddress: e.target.value})}
-                  placeholder="Email address"
-                  className="border border-[#ccc] p-[5px] mb-[10px] rounded" // input-box
+                  placeholder="Correo electrónico"
+                  className="border border-[#ccc] p-[5px] mb-[10px]"
                 />
               </div>
               <textarea
                 id="comment"
                 value={feedbackData.comment}
                 onChange={(e) => setFeedbackData({...feedbackData, comment: e.target.value})}
-                placeholder="Please let us know how your experience was"
-                className="w-full h-[100px] resize-none border border-[#ccc] rounded p-2"
+                placeholder="Por favor, cuéntanos cómo fue tu experiencia"
+                className="w-full h-[100px] resize-none border border-[#ccc] p-2"
               />
               <button 
                 type="submit" 
-                className="bg-[rgb(165,186,201)] text-white px-[30px] py-[5px] pb-[6px] border-none cursor-pointer rounded-[50px]" // submit-btn
+                className="text-[#C2A471] font-bold px-[30px] py-[5px] pb-[6px] border-2 border-[#C2A471] cursor-pointer mt-4"
               >
-                Submit
+                ENVIAR
               </button>
             </div>
           </form>
