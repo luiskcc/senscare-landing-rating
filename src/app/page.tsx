@@ -1,7 +1,9 @@
 import Header from "./Header";
 import FeedbackForm from "./FeedbackForm";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL('https://senscarespa.com'),
   title: "SensCare Spa - Feedback",
   description: "SensCare Spa - Feedback",
   icons: {
