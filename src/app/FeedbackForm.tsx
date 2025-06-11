@@ -32,7 +32,7 @@ const FeedbackForm = () => {
     }
 
   const redirectToPage = () => {
-    window.location.href = "https://search.google.com/local/writereview?placeid=ChIJqWhZCwDLQQwRTyWEGKzPClw";
+    window.location.href = "https://search.google.com/local/writereview?placeid=ChIJv_EwTLjNQQwRXhRYGLxQpdY";
   }
 
   const redirectToHomePage = () => {
