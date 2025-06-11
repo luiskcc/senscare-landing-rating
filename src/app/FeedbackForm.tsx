@@ -85,7 +85,7 @@ const FeedbackForm = () => {
   return (
 
     <div className="text-center text-[rgb(46,75,96)]">
-      <div className="content-section px-[40px] py-[150px] lg:px-[100px] lg:py-[200px] xl:p-[100px]">
+      <div className="content-section px-[60px] py-[120px] lg:px-[100px] lg:py-[200px] xl:p-[100px]">
         <h1 className="lg:text-4xl text-4xl text-slate-800 mb-4 font-open-sans">
           Gracias por visitarnos, valoramos tu opinión.
         </h1>
