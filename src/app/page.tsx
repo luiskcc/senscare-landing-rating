@@ -23,16 +23,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://senscarespa.com/feedback",
   },
-
-  og: {
-    title: "SensCare Spa - Feedback",
-    description: "SensCare Spa - Feedback",
-    images: "/og-image.png",
-  },
-
-  favicon: {
-    icon: "/senscare-favicon.ico",
-  },
   manifest: "/manifest.json",
   robots: {
     index: true,
